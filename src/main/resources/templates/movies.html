@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${command}"></title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overghflow: hidden;
+            display: inline;
+        }
+
+        li {
+            float: left;
+            padding: 30px;
+            width: 185px;
+            height: 277px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body style="background-color: #242424; text-align: center">
+<ul th:each="movie: ${movies}">
+    <li><a th:href="${movie.imdbUrl}">
+        <img th:src="${movie.posterUrl}">
+    </a> <br>
+        <a th:href="${movie.imdbUrl}">
+            <b style="color: floralwhite; font-family: Arial" th:text="${movie.title}"></b>
+        </a></li>
+</ul>
+<form th:name="JJJJ" th:action="asda"></form>
+</body>
+</html>

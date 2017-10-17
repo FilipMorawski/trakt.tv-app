@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+
+        input {
+            background: #575757;
+            width: 200px;
+            height: 30px;
+            alignment: left;
+            color: floralwhite;
+            font-family: Arial;
+        }
+
+        body {
+            background: #242424;
+            background-image: url("https://s1.postimg.org/5s68ca1u2n/traktlogo.jpg");
+            background-size: 20%;
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+
+        button {
+            background: #575757;
+            width: 200px;
+            height: 30px;
+            color: floralwhite;
+        }
+    </style>
+</head>
+<body>
+<h1 style="size: 40px; font-family: 'Arial Black'; text-align: left; color: crimson"><b>MY DATA</b></h1>
+
+<form action="http://localhost:8080/trakt/maslok/history">
+    <input type="submit" value="My history"/>
+</form>
+
+<form action="http://localhost:8080/trakt/maslok/watchlist">
+    <input type="submit" value="My watchlist" id="watchlist"/>
+</form>
+
+<h1 style="size: 40px; font-family: 'Arial Black'; fon text-align: left; color: crimson"><b>MOVIES</b></h1>
+<form action="http://localhost:8080/trakt/movies/trending">
+    <input type="submit" value="Trending"/>
+</form>
+
+<form action="http://localhost:8080/trakt/movies/popular">
+    <input type="submit" value="Most popular"/>
+</form>
+
+<form action="http://localhost:8080/trakt/movies/anticipated">
+    <input type="submit" value="Most anticipated"/>
+</form>
+
+<form action="http://localhost:8080/trakt/movies/boxoffice">
+    <input type="submit" value="Box Office"/>
+</form>
+
+<form action="http://localhost:8080/trakt/movies/watched">
+    <input type="submit" value="Most watched"/>
+</form>
+<h1 style="size: 40px; font-family: 'Arial Black'; fon text-align: left; color: crimson"><b>ANOTHER USER</b></h1>
+
+<form action="http://localhost:8080/trakt/?user" method="get">
+    <input type="text" name="user" value="username"
+           style="text-align: center; width: 196px; height: 20px; font-family: Arial; background: #7a7a7a">
+    <br>
+    <br>
+    <input type="submit" name="command" value="watchlist" align="right"/>
+    <br>
+    <input type="submit" name="command" value="history" align="right"/>
+</form>
+
+</body>
+</html>
